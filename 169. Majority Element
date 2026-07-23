@@ -1,0 +1,13 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+        Integer ans=null;
+        int co=0;
+        for(int num:nums){
+            if(co==0) {
+                ans=num;
+            }
+            co+=num==ans?1:-1;
+        }
+        return ans;
+    }
+}
